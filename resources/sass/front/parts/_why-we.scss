@@ -1,0 +1,94 @@
+
+.section-why-we {
+  h3 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    &.with-underline {
+
+      &:after {
+        content: '';
+        pointer-events: none;
+        display: block;
+        width: 160px;
+        margin-left: -40px;
+        margin-top: 10px;
+        border-bottom: 4px solid $brown;
+      }
+    }
+  }
+
+  .row {
+    width: 80%;
+
+    &.diamond {
+      padding-left: 20px;
+      .icon-diamond{
+        font-size: 3.5rem;
+        color: $gray-violet;
+      }
+
+      p {
+        font-size: 1rem;
+        padding-top: 1rem;
+        padding-left: 10px;
+      }
+    }
+  }
+
+
+  h4 {
+    font-size: 2.1rem;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .anim-numb {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50px;
+    background-color: $gray-violet;
+    margin: 10px auto;
+    padding: 0;
+    color: $white;
+  }
+
+  p {
+    text-align: center;
+    font-size: 0.83rem;
+  }
+}
+@media (min-width: 993px){
+  .section-why-we{
+  background: url("/img/asset-13.png");
+  padding: 70px 0;
+  background-size: cover;
+  }
+}
+@media (max-width: 992px){
+  .section-why-we{
+    background-color: $black;
+    color: $white;
+    text-align: center;
+    h3{
+      &.with-underline{
+      font-size: 2.5rem;
+    }}
+    .row {
+      width: 100%;
+      &.diamond {
+        .col-12{
+          text-align: center;
+        }
+        .icon-diamond {
+          font-size: 2rem;
+          color: $white;
+        }
+      }
+    }
+  }
+}

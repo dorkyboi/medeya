@@ -11,5 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/front/index.js', 'public/js/front.js')
+    .sass('resources/sass/front/main.scss', 'public/css/front.css')
+    .sourceMaps()
+    .browserSync('medeya.test');
