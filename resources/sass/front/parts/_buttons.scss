@@ -1,0 +1,50 @@
+.btn-med {
+    display: inline-block;
+    min-width: 218px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    padding: 16px 5px;
+    border: 1px solid transparent;
+    background-color: $gray-violet;
+    color:$white;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    transition: $speed-middle;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 17%);
+    &:hover{
+        text-decoration: none;
+        color: $gray-violet;
+        border-color: $gray-violet;
+        background-color: $white;
+    }
+}
+.btn-med.btn-med-l{
+    min-width: 443px;
+}
+
+.btn-med.btn-med-blue{
+    background-color: $gray-violet;
+    &:hover{
+        color: $gray-violet;
+        border-color: $gray-violet;
+        background-color: $white;
+    }
+}
+.btn-med.btn-med-grey{
+    background-color: $light-gray;
+    &:hover{
+        color: $light-gray;
+        border-color: $light-gray;
+        background-color: $white;
+    }
+}
+.btn-med.btn-med-brown{
+    background-color: $brown;
+    &:hover{
+        color: $brown;
+        border-color: $brown;
+        background-color: $white;
+    }
+}

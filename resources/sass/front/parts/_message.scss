@@ -1,0 +1,47 @@
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    &__content{
+        text-transform: uppercase;
+        font-size: 18px;
+        font-family: "Lato", sans-serif;
+        margin-right: 20px;
+        a{
+            color: $black;
+            transition: color $speed-low;
+            &:hover{
+                text-decoration: none;
+                color: $light-brown;
+            }
+        }
+    }
+    i{
+        cursor: pointer;
+        display: none;
+    }
+}
+@media all and (max-width: 767px){
+    .message{
+        background-color: $gray-violet;
+        color: $white;
+        a{
+            color: $white;
+            text-transform: lowercase;
+            font-size: 14px;
+            &:hover{
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+        .btn-med{
+            display: none;
+        }
+        i{
+            display: inline-block;
+            font-size: 14px;
+        }
+    }
+}
+

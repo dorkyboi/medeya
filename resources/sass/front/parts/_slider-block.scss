@@ -1,0 +1,123 @@
+.slider-block{
+    background-image: url("/img/backgrounds/bg-slider.png");
+    background-size: cover;
+    height: 1080px;
+    padding-top: 220px;
+}
+.carousel-inner{
+    height: 655px;
+    max-width: 1088px;
+    margin: auto;
+    .carousel-item{
+        height: 100%;
+
+    }
+}
+.carousel{
+    &__overlay{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+.carousel-indicators{
+    bottom: -70px;
+    li{
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        border: 5px solid transparent;
+        background-color: #B7B9BF;
+        margin: 0 5px;
+        transition: $speed-middle;
+        &.active,
+        &:hover{
+            border-color: $black;
+            background-color: transparent;
+        }
+    }
+}
+.carousel-control-prev,
+.carousel-control-next{
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+    border: 2px solid $black;
+    left: auto;
+    right: 90px;
+    span{
+        filter: invert(1);
+    }
+}
+.carousel-control-prev{
+    top: calc(50% - 44px);
+    transform: rotate(-90deg);
+}
+.carousel-control-next{
+    top: calc(50% + 44px);
+    transform: rotate(-90deg);
+}
+
+.social-icons{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: rotate(-90deg);
+    left: -100px;
+    a{
+        font-family: "Lato", sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        position: relative;
+        color: $black;
+        margin: 0 20px;
+        &:after{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: $black;
+            transition: $speed-middle;
+        }
+        &:hover{
+            text-decoration: none;
+            color: black;
+            transform: rotate(60deg);
+        }
+        &:hover:after{
+            width: 50%;
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -3px;
+            width: 0;
+            height: 1px;
+            background-color: $black;
+            transition: $speed-middle;
+        }
+        &:hover:before{
+            width: 50%;
+        }
+    }
+}

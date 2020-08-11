@@ -1,0 +1,138 @@
+$speed-low: .3s;
+$speed-middle: .5s;
+$speed-high: 1s;
+body{
+    font-family: 'Playfair Display';
+    color: $black;
+    font-size: 18px;
+    line-height: 1;
+}
+p{
+
+}
+h1{
+
+}
+
+h2{
+    font-size: 60px;
+    position: relative;
+    margin: 0;
+    margin-bottom: 50px;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 190px;
+        height: 5px;
+        background-color: $light-brown;
+        left: -30px;
+        bottom: -15px;
+    }
+}
+h2.h2-right{
+    text-align: right;
+    &:before{
+        content: '';
+        left: auto;
+        right: -30px;
+    }
+}
+h2.h2-center{
+    text-align: center;
+    display: inline-block;
+}
+
+h3{
+    font-size: 48px;
+    position: relative;
+    margin: 0;
+    margin-bottom: 40px;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 192px;
+        height: 1px;
+        background-color: $light-brown;
+        left: -30px;
+        bottom: -15px;
+    }
+}
+h3.h3-right{
+    text-align: right;
+    &:before{
+        content: '';
+        left: auto;
+        right: -30px;
+    }
+}
+h3.h3-center{
+    text-align: center;
+    display: inline-block;
+}
+
+h4{
+
+}
+h5{
+
+}
+h6{
+
+}
+
+.h-none-decor{
+    &:before,
+    &:after{
+        display: none;
+    }
+}
+
+.lh-1_5{
+    line-height: 1.5;
+}
+.lh-2{
+    line-height: 2;
+}
+.m--15{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.mt-6{
+    margin-top: 3.5rem !important;
+}
+.mt-7{
+    margin-top: 5rem !important;
+}
+.mt-8{
+    margin-top: 7.5rem !important;
+}
+
+.mb-6{
+    margin-bottom: 3.5rem !important;
+}
+.mb-7{
+    margin-bottom: 5rem !important;
+}
+.mb-8{
+    margin-bottom: 7.5rem !important;
+}
+
+li {
+    list-style: none;
+}
+.vertical-text {
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+.wrapper{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+@media all and (min-width: 1600px){
+  .container{
+    width: 100%;
+    max-width: 1640px;
+  }
+}

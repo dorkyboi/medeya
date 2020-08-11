@@ -1,44 +1,23 @@
-//резюмируем
-/*
-1. переработать код. Разьить на составляющие
-2. убрать глупые названия классов (z-index, например)
-3. Дать Славику по жопе и сказать приготовить нормальные иконки. Пусть работает. Если он не знает как (а он знает) пусть меня набирает
-4. заменить цвета на переменные
-5. шрифты тоже сделать переменными
-6. Посмотрите как мы делали сборщик js-файлов в один, чтобы в футере был один файлик
-7. я не нашла этого в видео - часть вы об.яснили сашке а он сделал все сам в нашем проекте ((
-*/
-
-//@import "~@fortawesome/fontawesome-free/scss/fontawesome";
-//@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~bootstrap/scss/bootstrap";
+@import "~owl.carousel2/dist/assets/owl.carousel.css";
+@import "~owl.carousel2/dist/assets/owl.theme.default.css";
 
-@import "parts/grid";
 @import "parts/fonts";
-@import "parts/colours";
-@import "parts/btn";
+@import "parts/colors";
+@import "parts/general";
+@import "parts/buttons";
 @import "parts/header";
+@import "parts/message";
+@import "parts/slider-block";
 @import "parts/contact-us-form";
 @import "parts/courses";
 @import "parts/about-us";
 @import "parts/trainers";
-@import "parts/main-carousel";
 @import "parts/why-we";
-@import "parts/main-form";
-@import "parts/review";
-@import "parts/contact";
+@import "parts/registration-form";
+@import "parts/reviews";
+@import "parts/contacts";
 @import "parts/footer";
 
-
-section {
-  font-size: 12px;
-  font-family: $Lato;
-  min-height: 100vh;
-}
-li {
-  list-style: none;
-}
-.vertical-text {
-  transform: rotate(-90deg);
-  transform-origin: center;
-}
