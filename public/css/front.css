@@ -18370,51 +18370,108 @@ li {
 
 .contacts {
   background-image: url("/img/backgrounds/bg-contacts.png");
+  padding: 90px 0;
 }
 
-section.section-footer {
+.contacts_block h4 {
+  font-size: 36px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.contacts_block p {
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.3;
+}
+
+.contacts_block a {
+  font-size: 24px;
+  font-family: "Lato", sans-serif;
+  color: #0D0C0C;
+  transition: color 0.3s;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.contacts_block a:hover {
+  color: #9D7255;
+  text-decoration: none;
+}
+
+.contacts_block a span {
+  color: #9D7255;
+  margin-left: 10px;
+}
+
+.contacts_block_social {
+  margin-top: 100px;
+}
+
+.contacts_block_social a {
+  font-size: 18px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.contacts_block_social a:last-child {
+  margin-right: 0;
+}
+
+.map {
+  padding: 0;
+}
+
+.map iframe {
+  width: 100%;
+  height: 370px;
+}
+
+footer {
   min-height: 110px;
   background-color: #0D0C0C;
   color: #FFFFFF;
 }
 
-section.section-footer .container {
+footer .container {
   min-height: 110px;
 }
 
-section.section-footer .container .social-icon {
+footer .container .social-icon {
   justify-content: center;
 }
 
-section.section-footer .container .social-icon span {
+footer .container .social-icon span {
   margin: 0 15px;
   font-size: 3rem;
   color: #FFFFFF;
 }
 
-section.section-footer .row {
+footer .row {
   min-height: 110px;
   align-items: center;
 }
 
-section.section-footer .row .col-12 {
+footer .row .col-12 {
   line-height: 30px;
 }
 
-section.section-footer .row a {
+footer .row a {
   color: #FFFFFF;
 }
 
-section.section-footer .row a:hover {
+footer .row a:hover {
   color: #BEBCBC;
 }
 
-section.section-footer .row .text-right a {
+footer .row .text-right a {
   margin-left: 0;
   font-size: 1rem;
 }
 
-section.section-footer .row .text-right a img {
+footer .row .text-right a img {
   margin-left: 5px;
 }
 
