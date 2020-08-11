@@ -42,9 +42,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Контакты</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{--<li class="nav-item">
                                         <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
-                                    </li>
+                                    </li>--}}
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Днепропетровск
@@ -517,22 +517,17 @@
             </section>
         </main>
         <footer>
-            <div class="container">
-                <div class="row social-icon text-center d-lg-none">
-                    <span class="icon-instagram"></span>
-                    <span class="icon-facebook"></span>
-                    <span class="icon-youtube"></span>
-                </div>
-                <div class="row text-center">
-                    <div class="col-12 col-lg-3">
+            <div class="container-fluid pl-lg-5 pr-lg-5">
+                <div class="row align-items-center h-110">
+                    <div class="col-lg-4 pl-5">
                         <p>Made with &#10084;&#65039; by WebCosmonauts</p>
                     </div>
-                    <div class="col-12 col-lg-3">
-                        <a class="col-12 col-lg-3" href="#" title="Terms of Use">Пользовательское соглашение</a></div>
-                    <div class="col-12 col-lg-3"><a class="col-12 col-lg-3" href="#" title="Privacy Policy">Политика конфидециальности</a>
+                    <div class="col-lg-4">
+                        <a href="#" title="Terms of Use" class="mr-3">Пользовательское соглашение</a>
+                        <a href="#" title="Privacy Policy">Политика конфидециальности</a>
                     </div>
-                    <div class="col-lg-3 text-right d-none d-lg-inline-block">
-                        <a href="#" title="Go to top">Наверх<img src="svg/arrow_up.svg" alt="Go to top"></a>
+                    <div class="col-lg-4 pr-5 text-right">
+                        <div id="top">Наверх</div>
                     </div>
                 </div>
             </div>
