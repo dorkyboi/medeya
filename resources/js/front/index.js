@@ -15,7 +15,11 @@ $(document).ready(function () {
         $('.message').addClass('d-none');
     });
 
-
+    $('#top').click(function () {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 1000);
+    });
 
 });
 
@@ -32,7 +36,7 @@ $('.owl-carousel').owlCarousel({
         0:{
             items:1
         },
-        1000:{
+        700:{
             items:3
         }
     }

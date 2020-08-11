@@ -1,3 +1,45 @@
 .contacts{
     background-image: url("/img/backgrounds/bg-contacts.png");
+    padding: 90px 0;
+    &_block{
+        h4{
+            font-size: 36px;
+            font-family: "Playfair Display", serif;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        p{
+            font-size: 18px;
+            font-family: "Lato", sans-serif;
+            line-height: 1.3;
+        }
+        a{
+            font-size: 24px;
+            font-family: "Lato", sans-serif;
+            color: $black;
+            transition: color $speed-low;
+            display: inline-block;
+            margin-bottom: 30px;
+            &:hover{
+                color: $brown;
+                text-decoration: none;
+            }
+            span{
+                color: $brown;
+                margin-left: 10px;
+            }
+        }
+        &_social{
+            margin-top: 100px;
+            a{
+                font-size: 18px;
+                text-transform: uppercase;
+                display: inline-block;
+                margin-right: 50px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }

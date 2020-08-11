@@ -5,6 +5,12 @@
             align-items: end;
             padding: 0 30px;
         }
+        .navbar-brand{
+            padding: 15px 0;
+            img{
+                transition: $speed-low;
+            }
+        }
         .navbar-nav{
             a.nav-link{
                 color: $black;
@@ -16,7 +22,7 @@
                 text-align: center;
                 height: 100%;
                 transition: $speed-low;
-                padding: 17px 1.1vw;
+                padding: 24px 1.1vw;
                 display: flex;
                 align-items: center;
             }
@@ -65,9 +71,11 @@
     header.active{
         background-color: rgb(177 180 200 / 90%);
         .navbar-brand{
+            padding: 15px 26px;
             img{
                 width: auto;
                 height: 100%;
+                max-height: 60px;
             }
         }
     }

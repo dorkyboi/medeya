@@ -42,9 +42,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Контакты</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{--<li class="nav-item">
                                         <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
-                                    </li>
+                                    </li>--}}
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Днепропетровск
@@ -470,46 +470,67 @@
                 </div>
             </section>
             <section class="contacts">
-
-            </section>
-        </main>
-        <footer>
-
-        </footer>
-
-        <div class="old-layout ">
-            <section class="section-contact">
-                <div class="container-fluid map">
+                <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.1292421177623!2d35.02394551574699!3d48.473234535701835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f9e857fccb%3A0x9aaf6cfdd50a697e!2sDmytra%20Yavornytskoho%20Avenue%2C%20107%2C%20Dnipropetrovs&#39;k%2C%20Dnipropetrovs&#39;ka%20oblast%2C%20Ukraina%2C%2049000!5e0!3m2!1spl!2spl!4v1595524161808!5m2!1spl!2spl"
-                                    style="border:0;" allowfullscreen="" aria-hidden="false"
-                                    tabindex="0"></iframe>
+                            <div class="text-center">
+                                <h2 class="h2-center mb-8">Контакты</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="contacts_block">
+                                <h4>АДРЕС:</h4>
+                                <p>
+                                    Проспект Дмитрия Яворницкого, 107а
+                                    Днепропетровск
+                                    Украина, 49038
+                                </p>
+                                <h4>Режим работы:</h4>
+                                <p>С понедельника по пятницу с 9:00 до 17:00</p>
+                                <div class="contacts_block_social">
+                                    <p>Мы в социальных сетях:</p>
+                                    <div class="d-flex mt-4">
+                                        <a href="#">youtube</a>
+                                        <a href="#">INStagram</a>
+                                        <a href="#">FACEBOOK</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 offset-lg-1">
+                            <div class="contacts_block">
+                                <h4>ТЕЛЕФОН:</h4>
+                                <a href="tel:+480669476096">+48 066 947 6096<span>НАТАЛЬЯ</span></a>
+                                <h4>EMAIL:</h4>
+                                <a href="mailto:natalypo88@gmail.com">natalypo88@gmail.com</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-        <section class="section-footer">
-            <div class="container">
-                <div class="row social-icon text-center d-lg-none">
-                    <span class="icon-instagram"></span>
-                    <span class="icon-facebook"></span>
-                    <span class="icon-youtube"></span>
-                </div>
-                <div class="row text-center">
-                    <div class="col-12 col-lg-3">
+            <section class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.1292421177623!2d35.02394551574699!3d48.473234535701835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2f9e857fccb%3A0x9aaf6cfdd50a697e!2sDmytra%20Yavornytskoho%20Avenue%2C%20107%2C%20Dnipropetrovs&#39;k%2C%20Dnipropetrovs&#39;ka%20oblast%2C%20Ukraina%2C%2049000!5e0!3m2!1spl!2spl!4v1595524161808!5m2!1spl!2spl"
+                        style="border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+            </section>
+        </main>
+        <footer>
+            <div class="container-fluid pl-lg-5 pr-lg-5">
+                <div class="row align-items-center h-110">
+                    <div class="col-lg-4 pl-5">
                         <p>Made with &#10084;&#65039; by WebCosmonauts</p>
                     </div>
-                    <div class="col-12 col-lg-3">
-                        <a class="col-12 col-lg-3" href="#" title="Terms of Use">Пользовательское соглашение</a></div>
-                        <div class="col-12 col-lg-3"><a class="col-12 col-lg-3" href="#" title="Privacy Policy">Политика конфидециальности</a>
+                    <div class="col-lg-4">
+                        <a href="#" title="Terms of Use" class="mr-3">Пользовательское соглашение</a>
+                        <a href="#" title="Privacy Policy">Политика конфидециальности</a>
                     </div>
-                    <div class="col-lg-3 text-right d-none d-lg-inline-block">
-                        <a href="#" title="Go to top">Наверх<img src="svg/arrow_up.svg" alt="Go to top"></a>
+                    <div class="col-lg-4 pr-5 text-right">
+                        <div id="top">Наверх</div>
                     </div>
                 </div>
             </div>
-        </section>
-        </div>
+        </footer>
     </div>
 @endsection
