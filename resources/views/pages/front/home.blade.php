@@ -11,7 +11,9 @@
                                 <img src="img/logo.png" alt="logo" />
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </button>
 
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,7 +47,7 @@
                                     {{--<li class="nav-item">
                                         <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
                                     </li>--}}
-                                    <li class="nav-item dropdown">
+                                    <li class="nav-item dropdown city">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Днепропетровск
                                         </a>
@@ -57,8 +59,12 @@
                                     </li>
                                     <li class="nav-item language">
                                         <span class="nav-link">
-                                            <a class="nav-link" href="#">RU</a>
                                             <a class="nav-link" href="#">UA</a>
+                                        </span>
+                                    </li>
+                                    <li class="nav-item language">
+                                        <span class="nav-link">
+                                            <a class="nav-link" href="#">RU</a>
                                         </span>
                                     </li>
                                     <li class="nav-item dropdown">
@@ -115,10 +121,12 @@
                                             <div class="carousel-content__h3">
                                                 Курсы косметолога как для начинающих так и для практикующих специалистов в г. Днепр.
                                             </div>
-                                            <a href="#" class="btn-med">Подробнее</a>
+                                            <div class="text-center">
+                                                <a href="#" class="btn-med">Подробнее</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="carousel-item">
+                                    {{--<div class="carousel-item">
                                         <div class="carousel__overlay">
                                             <img src="img/img-slider-2.png" class="d-block w-100" alt="...">
                                         </div>
@@ -127,7 +135,7 @@
                                         <div class="carousel__overlay">
                                             <img src="img/img-slider-3.png" class="d-block w-100" alt="...">
                                         </div>
-                                    </div>
+                                    </div>--}}
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
