@@ -51,24 +51,44 @@
                                 </ul>
                                 <ul class="navbar-nav m-auto">
                                     <li class="nav-item dropdown city">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Днепропетровск
+                                        <a
+                                            class="nav-link dropdown-toggle"
+                                            href="#"
+                                            id="navbarDropdownCities"
+                                            role="button"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            {{ __('cities.' . getCity()) }}
                                         </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#">Днепропетровск</a>
-                                            <a class="dropdown-item" href="#">Днепропетровск</a>
-                                            <a class="dropdown-item" href="#">Днепропетровск</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownCities">
+                                            @foreach(config('app.cities') as $city)
+                                                <a class="dropdown-item" href="{{ replaceRequestCity($city) }}">
+                                                    {{ __('cities.' . $city) }}
+                                                </a>
+                                            @endforeach
                                         </div>
                                     </li>
-                                    <li class="nav-item language">
-                                        <span class="nav-link">
-                                            <a class="nav-link" href="#">UA</a>
-                                        </span>
-                                    </li>
-                                    <li class="nav-item language">
-                                        <span class="nav-link">
-                                            <a class="nav-link" href="#">RU</a>
-                                        </span>
+                                    <li class="nav-item dropdown city">
+                                        <a
+                                            class="nav-link dropdown-toggle"
+                                            href="#"
+                                            id="navbarDropdownLocales"
+                                            role="button"
+                                            data-toggle="dropdown"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                        >
+                                            {{ strtoupper(app()->getLocale()) }}
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownLocales">
+                                            @foreach(config('app.locales') as $locale)
+                                                <a class="dropdown-item" href="{{ replaceRequestLocale($locale) }}">
+                                                    {{ __('locales.' . $locale) }}
+                                                </a>
+                                            @endforeach
+                                        </div>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
