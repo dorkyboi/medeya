@@ -2,6 +2,7 @@ footer{
   min-height:110px;
   background-color: $black;
   color: $white;
+    position: relative;
     p{
         color: $white;
         font-size: 18px;
@@ -20,4 +21,31 @@ footer{
 }
 #top{
     cursor: pointer;
+    position: absolute;
+    bottom: 45px;
+    right: 70px;
+}
+
+@media all and (max-width: 1200px){
+    footer{
+        p,a{
+            font-size: 14px;
+        }
+        .pl-5,
+        .pr-5{
+            padding: 15px !important;
+        }
+    }
+}
+@media all and (max-width: 500px){
+    footer{
+        a {
+            font-size: 11px;
+        }
+    }
+    #top{
+        bottom: 75px;
+        right: 31px;
+        font-size: 14px;
+    }
 }

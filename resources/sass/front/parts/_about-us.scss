@@ -98,3 +98,18 @@
         height: 420px;
     }
 }
+
+@media all and (max-width: 991px){
+    .about-us__h2.h2-right{
+        display: none;
+    }
+    .about-us_text-block {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 0;
+    }
+    .about-us_video-block{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

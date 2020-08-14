@@ -163,6 +163,9 @@
     }
 }
 @media all and (max-width: 1200px){
+    .wrapper header .navbar-nav .nav-item a.nav-link {
+        padding: 15px;
+    }
     .nav-item{
         border-bottom: 1px solid $black;
     }

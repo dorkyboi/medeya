@@ -43,3 +43,27 @@
         }
     }
 }
+
+@media all and (max-width: 767px){
+    .contacts{
+        background-image: none;
+        padding: 90px 15px;
+        h2{
+            margin-bottom: 50px !important;
+        }
+        h4{
+            font-size: 20px;
+        }
+        .contacts_block_social {
+            margin-top: 60px;
+        }
+        .contacts_block a{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contacts_block a {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+}

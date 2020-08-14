@@ -17609,6 +17609,11 @@ li {
     margin-top: 40px;
   }
 
+  h4 {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+
   .wrapper .courses_text-block-mod {
     float: none;
   }
@@ -17839,6 +17844,10 @@ li {
 }
 
 @media all and (max-width: 1200px) {
+  .wrapper header .navbar-nav .nav-item a.nav-link {
+    padding: 15px;
+  }
+
   .nav-item {
     border-bottom: 1px solid #0D0C0C;
   }
@@ -18304,6 +18313,12 @@ li {
   .courses_text-block {
     max-width: 90%;
   }
+
+  .courses .w-50 {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 .about-us {
@@ -18425,6 +18440,23 @@ li {
   }
 }
 
+@media all and (max-width: 991px) {
+  .about-us__h2.h2-right {
+    display: none;
+  }
+
+  .about-us_text-block {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 0;
+  }
+
+  .about-us_video-block {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .trainers {
   background-image: url("/img/backgrounds/bg-courses.png");
   background-size: cover;
@@ -18517,6 +18549,7 @@ li {
 .count {
   display: flex;
   justify-content: space-between;
+  max-width: 800px;
 }
 
 .count_item__number {
@@ -18886,6 +18919,35 @@ li {
   margin-right: 0;
 }
 
+@media all and (max-width: 767px) {
+  .contacts {
+    background-image: none;
+    padding: 90px 15px;
+  }
+
+  .contacts h2 {
+    margin-bottom: 50px !important;
+  }
+
+  .contacts h4 {
+    font-size: 20px;
+  }
+
+  .contacts .contacts_block_social {
+    margin-top: 60px;
+  }
+
+  .contacts .contacts_block a {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .contacts .contacts_block a {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
 .map {
   padding: 0;
 }
@@ -18899,6 +18961,7 @@ footer {
   min-height: 110px;
   background-color: #0D0C0C;
   color: #FFFFFF;
+  position: relative;
 }
 
 footer p {
@@ -18921,5 +18984,32 @@ footer a:hover {
 
 #top {
   cursor: pointer;
+  position: absolute;
+  bottom: 45px;
+  right: 70px;
+}
+
+@media all and (max-width: 1200px) {
+  footer p,
+  footer a {
+    font-size: 14px;
+  }
+
+  footer .pl-5,
+  footer .pr-5 {
+    padding: 15px !important;
+  }
+}
+
+@media all and (max-width: 500px) {
+  footer a {
+    font-size: 11px;
+  }
+
+  #top {
+    bottom: 75px;
+    right: 31px;
+    font-size: 14px;
+  }
 }
 

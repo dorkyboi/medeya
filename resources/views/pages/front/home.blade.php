@@ -47,6 +47,9 @@
                                     {{--<li class="nav-item">
                                         <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
                                     </li>--}}
+
+                                </ul>
+                                <ul class="navbar-nav m-auto">
                                     <li class="nav-item dropdown city">
                                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Днепропетровск
@@ -257,7 +260,7 @@
             <section class="why-we">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <h2 class="mb-6">
                                 Почему выбирают нас
                             </h2>
@@ -571,16 +574,14 @@
         <footer>
             <div class="container-fluid pl-lg-5 pr-lg-5">
                 <div class="row align-items-center h-110">
-                    <div class="col-lg-4 pl-5">
+                    <div class="col-lg-5 pl-5">
                         <p>Made with &#10084;&#65039; by WebCosmonauts</p>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-7 pr-5">
                         <a href="#" title="Terms of Use" class="mr-3">Пользовательское соглашение</a>
                         <a href="#" title="Privacy Policy">Политика конфидециальности</a>
                     </div>
-                    <div class="col-lg-4 pr-5 text-right">
-                        <div id="top">Наверх</div>
-                    </div>
+                    <div id="top">Наверх</div>
                 </div>
             </div>
         </footer>

@@ -30,6 +30,7 @@
 .count{
     display: flex;
     justify-content: space-between;
+    max-width: 800px;
     &_item{
         &__number{
             width: 111px;
