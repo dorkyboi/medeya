@@ -58,6 +58,9 @@
         h2,h3{
             text-align: center;
         }
+        h2:before{
+            display: none;
+        }
         ul li{
             text-align: center;
             padding-top: 60px;

@@ -19,6 +19,13 @@
         margin-right: 140px;
     }
 }
+@media all and (max-width: 991px){
+    .courses{
+        h3{
+          font-size: 38px;
+        }
+    }
+}
 
 @media all and (max-width: 767px){
     .courses_text-block {

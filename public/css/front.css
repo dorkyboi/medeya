@@ -17715,6 +17715,7 @@ li {
 
 .wrapper header .navbar-nav .nav-item {
   transition: 0.3s;
+  min-height: 90px;
 }
 
 .wrapper header .navbar-nav .nav-item:hover {
@@ -17770,16 +17771,6 @@ li {
 
 .wrapper header.active {
   background-color: rgba(177, 180, 200, 0.9);
-}
-
-.wrapper header.active .navbar-brand {
-  padding: 15px 26px;
-}
-
-.wrapper header.active .navbar-brand img {
-  width: auto;
-  height: 100%;
-  max-height: 60px;
 }
 
 @media all and (max-width: 1600px) {
@@ -17844,6 +17835,10 @@ li {
 }
 
 @media all and (max-width: 1200px) {
+  .wrapper header .navbar-nav .nav-item {
+    min-height: auto;
+  }
+
   .wrapper header .navbar-nav .nav-item a.nav-link {
     padding: 15px;
   }
@@ -17882,9 +17877,22 @@ li {
 }
 
 @media all and (max-width: 767px) {
+  .wrapper header.active {
+    background-color: #b1b4c8;
+  }
+
   .wrapper header .navbar {
     align-items: end;
     padding: 0;
+  }
+
+  .navbar-collapse {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .wrapper .slider-block {
+    padding-top: 140px;
   }
 }
 
@@ -18068,12 +18076,12 @@ li {
 }
 
 .carousel-control-prev {
-  top: calc(50% - 44px);
+  top: calc(50% + 44px);
   transform: rotate(-90deg);
 }
 
 .carousel-control-next {
-  top: calc(50% + 44px);
+  top: calc(50% - 44px);
   transform: rotate(-90deg);
 }
 
@@ -18130,6 +18138,35 @@ li {
   width: 50%;
 }
 
+@media all and (max-width: 1300px) {
+  .carousel-inner {
+    max-width: 900px;
+  }
+
+  .wrapper .carousel-control-prev,
+  .wrapper .carousel-control-next {
+    right: -40px;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  .carousel-inner {
+    max-width: 800px;
+  }
+
+  .wrapper .carousel-control-prev,
+  .wrapper .carousel-control-next {
+    right: -25px;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  .wrapper .carousel-control-prev,
+  .wrapper .carousel-control-next {
+    right: -22px;
+  }
+}
+
 @media all and (max-width: 991px) {
   .carousel-content__h1 {
     font-size: 82px;
@@ -18137,6 +18174,15 @@ li {
 
   .carousel-content__h2 {
     font-size: 42px;
+  }
+
+  .carousel-inner {
+    max-width: 600px;
+  }
+
+  .wrapper .carousel-control-prev,
+  .wrapper .carousel-control-next {
+    right: -22px;
   }
 }
 
@@ -18309,6 +18355,12 @@ li {
   margin-right: 140px;
 }
 
+@media all and (max-width: 991px) {
+  .courses h3 {
+    font-size: 38px;
+  }
+}
+
 @media all and (max-width: 767px) {
   .courses_text-block {
     max-width: 90%;
@@ -18457,6 +18509,12 @@ li {
   }
 }
 
+@media all and (max-width: 767px) {
+  .about-us_text-block {
+    text-align: center;
+  }
+}
+
 .trainers {
   background-image: url("/img/backgrounds/bg-courses.png");
   background-size: cover;
@@ -18509,7 +18567,7 @@ li {
   }
 
   .trainers_item:last-child {
-    margin-bottom: 0;
+    margin-bottom: 50px;
   }
 }
 
@@ -18578,6 +18636,10 @@ li {
   .why-we h2,
   .why-we h3 {
     text-align: center;
+  }
+
+  .why-we h2:before {
+    display: none;
   }
 
   .why-we ul li {
@@ -18750,6 +18812,8 @@ li {
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 90px;
+  padding-left: 55px;
+  padding-right: 55px;
 }
 
 .reviews_block {

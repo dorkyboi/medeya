@@ -149,7 +149,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    {{--<div class="carousel-item">
+                                    <div class="carousel-item">
                                         <div class="carousel__overlay">
                                             <img src="/img/img-slider-2.png" class="d-block w-100" alt="...">
                                         </div>
@@ -158,7 +158,7 @@
                                         <div class="carousel__overlay">
                                             <img src="/img/img-slider-3.png" class="d-block w-100" alt="...">
                                         </div>
-                                    </div>--}}
+                                    </div>
                                 </div>
                                 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -601,7 +601,7 @@
                         <a href="#" title="Terms of Use" class="mr-3">Пользовательское соглашение</a>
                         <a href="#" title="Privacy Policy">Политика конфидециальности</a>
                     </div>
-                    <div id="top">Наверх</div>
+                    <div id="top">Наверх <i class="fas fa-long-arrow-alt-up"></i></div>
                 </div>
             </div>
         </footer>
