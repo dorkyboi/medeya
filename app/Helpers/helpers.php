@@ -11,3 +11,23 @@ if (!function_exists('getCity')) {
         return session()->get('city');
     }
 }
+
+if (!function_exists('replaceRequestSegment')) {
+    function replaceRequestSegment(int $index, $value) {
+        $segments = request()->segments();
+        $segments[$index] = $value;
+        return implode('/', $segments);
+    }
+}
+
+if (!function_exists('replaceRequestLocale')) {
+    function replaceRequestLocale(string $locale) {
+        return '/' . replaceRequestSegment(0, $locale);
+    }
+}
+
+if (!function_exists('replaceRequestCity')) {
+    function replaceRequestCity(string $city) {
+        return '/' . replaceRequestSegment(1, $city);
+    }
+}
