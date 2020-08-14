@@ -13,4 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'pages.front.home');
+Route::redirect('/', '/' . config('app.fallback_locale') . '/' . config('app.fallback_city'));
+
+Route::group(['middleware' => 'city.locale', 'prefix' => '{locale}/{city}'], function () {
+    Route::view('/', 'pages.front.home');
+
+    
+});
