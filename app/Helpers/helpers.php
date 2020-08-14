@@ -31,3 +31,9 @@ if (!function_exists('replaceRequestCity')) {
         return '/' . replaceRequestSegment(1, $city);
     }
 }
+
+if (!function_exists('indexLink')) {
+    function indexLink() {
+        return '/' . app()->getLocale() . '/' . getCity();
+    }
+}
