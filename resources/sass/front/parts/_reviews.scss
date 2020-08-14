@@ -40,3 +40,75 @@
         }
     }
 }
+
+.wrapper {
+    .reviews {
+        .owl-dot {
+            span {
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                border: 5px solid transparent;
+                background-color: #B7B9BF;
+                margin: 0 5px;
+                transition: 0.5s;
+                display: inline-block;
+            }
+        }
+        .owl-dot.active{
+            span{
+                border-color: #0D0C0C;
+                background-color: transparent;
+            }
+        }
+        .owl-nav{
+            .owl-prev,
+            .owl-next{
+                border: 1px solid $black;
+                border-radius: 100%;
+                width: 44px;
+                height: 44px;
+                background: transparent;
+                color: $black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                span{
+                    filter: invert(1);
+                }
+            }
+            .owl-prev{
+                left: -55px;
+            }
+            .owl-next{
+                right: -55px;
+            }
+        }
+    }
+}
+.owl-theme .owl-nav{
+    margin-top: 80px;
+}
+
+@media all and (max-width: 767px){
+    .reviews{
+        padding-top: 50px;
+        background-image: none;
+        background-color: $light-beige;
+        &_block{
+            max-width: 300px;
+            background-color: $white;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+    }
+    .wrapper .reviews .owl-nav .owl-prev {
+        left: 0;
+    }
+    .wrapper .reviews .owl-nav .owl-next {
+        right: 0;
+    }
+}

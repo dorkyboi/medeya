@@ -19,3 +19,9 @@
         margin-right: 140px;
     }
 }
+
+@media all and (max-width: 767px){
+    .courses_text-block {
+        max-width: 90%;
+    }
+}

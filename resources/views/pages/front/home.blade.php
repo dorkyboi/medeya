@@ -8,7 +8,7 @@
                     <div class="col-12">
                         <nav class="navbar navbar-expand-xl navbar-light">
                             <a class="navbar-brand" href="#">
-                                <img src="img/logo.png" alt="logo" />
+                                <img src="/img/logo.png" alt="logo" />
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span></span>
@@ -111,7 +111,7 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="carousel__overlay">
-                                            <img src="img/img-slider-1.png" class="d-block w-100" alt="...">
+                                            <img src="/img/img-slider-1.png" class="d-block w-100" alt="...">
                                         </div>
                                         <div class="carousel-content">
                                             <div class="carousel-content__h1">MEDEYA GROUP</div>
@@ -128,12 +128,12 @@
                                     </div>
                                     {{--<div class="carousel-item">
                                         <div class="carousel__overlay">
-                                            <img src="img/img-slider-2.png" class="d-block w-100" alt="...">
+                                            <img src="/img/img-slider-2.png" class="d-block w-100" alt="...">
                                         </div>
                                     </div>
                                     <div class="carousel-item">
                                         <div class="carousel__overlay">
-                                            <img src="img/img-slider-3.png" class="d-block w-100" alt="...">
+                                            <img src="/img/img-slider-3.png" class="d-block w-100" alt="...">
                                         </div>
                                     </div>--}}
                                 </div>
@@ -222,12 +222,12 @@
             <section class="about-us">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-lg-5">
                             <div class="about-us_img-block">
                                 <img src="/img/asset-10.png" alt="asset-10">
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-lg-5">
                             <div class="about-us_text-block">
                                 <div class="about-us__h3">MEDEYA GROUP</div>
                                 <p class="mb-4">
@@ -238,7 +238,7 @@
                                 <a href="#" class="btn-med">ВЫБРАТЬ КУРС</a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-lg-2">
                             <h2 class="about-us__h2 h2-right">О НАС</h2>
                         </div>
                     </div>
@@ -406,6 +406,50 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="reviews_block">
+                                        <div class="reviews_block__img">
+                                            <img src="/img/img-reviews.png" alt="img-reviews" />
+                                        </div>
+                                        <div class="reviews_block__name">
+                                            Светлана
+                                        </div>
+                                        <div class="reviews_block__date">
+                                            25.02.2020
+                                        </div>
+                                        <div class="reviews_block__description">
+                                            Вера, хотела с вами поделиться касательно
+                                            пилингов Falthy. Детали TCA c минимальной
+                                            выдержкой, но даже за одну процедуру
+                                            клиентка увидела как размылись границы
+                                            пигментных пятен и с 3 по 5 день очень
+                                            комфортно реабилитировалась мелким
+                                            шелушением)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="reviews_block">
+                                        <div class="reviews_block__img">
+                                            <img src="/img/img-reviews.png" alt="img-reviews" />
+                                        </div>
+                                        <div class="reviews_block__name">
+                                            Светлана
+                                        </div>
+                                        <div class="reviews_block__date">
+                                            25.02.2020
+                                        </div>
+                                        <div class="reviews_block__description">
+                                            Вера, хотела с вами поделиться касательно
+                                            пилингов Falthy. Детали TCA c минимальной
+                                            выдержкой, но даже за одну процедуру
+                                            клиентка увидела как размылись границы
+                                            пигментных пятен и с 3 по 5 день очень
+                                            комфортно реабилитировалась мелким
+                                            шелушением)
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="item">
                                     <div class="reviews_block">
                                         <div class="reviews_block__img">

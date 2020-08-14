@@ -77,3 +77,44 @@
         }
     }
 }
+
+@media all and (max-width: 767px){
+    .registration-form{
+        .thanks{
+            display: none;
+        }
+        padding-bottom: 90px;
+        h2{
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 30px !important;
+            &:before{
+                display: none;
+            }
+        }
+    }
+    .registration-form_img,
+    .registration-form_img__inner{
+        display: none;
+    }
+    .registration-form_form {
+        max-width: 320px;
+        margin: auto;
+        padding: 40px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        background-color: $gray-beige;
+        .btn-med.btn-med-l{
+            min-width: 218px;
+            display: block;
+            margin: auto;
+        }
+    }
+    .registration-form_form__h1{
+        display: none;
+    }
+    .registration-form_form input[type=text],
+    .registration-form_form input[type=email]{
+        background: transparent;
+    }
+}

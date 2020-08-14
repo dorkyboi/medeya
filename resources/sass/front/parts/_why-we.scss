@@ -47,3 +47,32 @@
         }
     }
 }
+
+@media all and (max-width: 767px){
+    .why-we{
+        background-image: none;
+        background-color: #000;
+        color: #fff;
+        padding-bottom: 90px;
+        h2,h3{
+            text-align: center;
+        }
+        ul li{
+            text-align: center;
+            padding-top: 60px;
+            padding-left: 0;
+            color: #fff;
+            &:before{
+                right: 0;
+                top: -40px;
+            }
+        }
+        .count {
+            flex-direction: column;
+            text-align: center;
+            &_item{
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

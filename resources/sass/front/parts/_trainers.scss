@@ -32,3 +32,16 @@
         }
     }
 }
+@media all and (max-width: 767px){
+    .trainers_item__img {
+        height: 390px;
+
+    }
+    .trainers_item{
+        margin-top: 0 !important;
+        margin-bottom: 60px;
+    }
+    .trainers_item:last-child{
+        margin-bottom: 0;
+    }
+}

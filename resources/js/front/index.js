@@ -31,7 +31,7 @@ $('.owl-carousel').owlCarousel({
     margin:10,
     dots:true,
     nav:true,
-    navText:['<','>'],
+    navText:['<span class="carousel-control-prev-icon" aria-hidden="true"></span>','<span class="carousel-control-next-icon" aria-hidden="true"></span>'],
     responsive:{
         0:{
             items:1
