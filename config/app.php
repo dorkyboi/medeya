@@ -80,8 +80,8 @@ return [
     |
     */
 
-    'locale' => 'ua',
-    'locales' => ['ua', 'ru'],
+    'locale' => 'uk',
+    'locales' => ['uk', 'ru'],
 
     /*
     |--------------------------------------------------------------------------
@@ -94,10 +94,10 @@ return [
     |
     */
 
-    'fallback_locale' => 'ua',
+    'fallback_locale' => 'uk',
 
-    'cities' => ['dn'],
-    'fallback_city' => 'dn',
+    'cities' => ['dp'],
+    'fallback_city' => 'dp',
 
     /*
     |--------------------------------------------------------------------------
