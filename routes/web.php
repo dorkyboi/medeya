@@ -20,3 +20,7 @@ Route::group(['middleware' => 'city.locale', 'prefix' => '{locale}/{city}'], fun
 
     
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

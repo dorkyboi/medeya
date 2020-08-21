@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\URL;
 
 class SetLocaleAndCity
 {
@@ -30,6 +31,14 @@ class SetLocaleAndCity
 
         app()->setLocale($locale);
         setCity($city);
+
+        /*URL::defaults([
+            'locale' => $locale,
+            'city' => $city,
+        ]);*/
+
+//        $route->forgetParameter('locale');
+//        $route->forgetParameter('city');
 
         return $next($request);
     }
