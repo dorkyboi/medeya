@@ -194,6 +194,40 @@
                     </div>
                 </div>
             </section>
+            <section class="about-us">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="about-us_img-block">
+                                <img src="/img/asset-10.png" alt="asset-10">
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="about-us_text-block">
+                                <div class="about-us__h3">MEDEYA GROUP</div>
+                                <p class="mb-4">
+                                    <i class="lh-1_5">
+                                        @lang('Косметологічний центр заснований в 2015 році. Ми створили ідеальну платформу для навчання кваліфікованих фахівців індустрії краси та наповнення ринку України професійною космологічної продукцією високої якості, відомих світових брендів.')
+                                    </i>
+                                </p>
+                                {{--<a href="#" class="btn-med">ВЫБРАТЬ КУРС</a>--}}
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <h2 class="about-us__h2 h2-right">@lang('ПРО НАС')</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-us_video-block">
+                    <iframe
+                        src="https://www.youtube.com/embed/rto2Nr9ciFc"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    >
+                    </iframe>
+                </div>
+            </section>
             <section class="courses">
                 <div class="container">
                     <div class="row">
@@ -257,40 +291,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="about-us">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-5">
-                            <div class="about-us_img-block">
-                                <img src="/img/asset-10.png" alt="asset-10">
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="about-us_text-block">
-                                <div class="about-us__h3">MEDEYA GROUP</div>
-                                <p class="mb-4">
-                                    <i class="lh-1_5">
-                                        @lang('Косметологічний центр заснований в 2015 році. Ми створили ідеальну платформу для навчання кваліфікованих фахівців індустрії краси та наповнення ринку України професійною космологічної продукцією високої якості, відомих світових брендів.')
-                                    </i>
-                                </p>
-                                {{--<a href="#" class="btn-med">ВЫБРАТЬ КУРС</a>--}}
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <h2 class="about-us__h2 h2-right">@lang('ПРО НАС')</h2>
-                        </div>
-                    </div>
-                </div>
-                {{--<div class="about-us_video-block">
-                    <iframe
-                        src="https://www.youtube.com/embed/NP7uSMILcyI"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    >
-                    </iframe>
-                </div>--}}
             </section>
             <section class="why-we">
                 <div class="container">
@@ -576,7 +576,7 @@
                                     @lang('Проспект Дмитра Яворницького, 107а Дніпро Україна, 49038')
                                 </p>
                                 <h4>@lang('Режим роботи'):</h4>
-                                <p>@lang('З понеділка по п\'ятницю з 9:00 до 17:00')</p>
+                                <p>@lang('З 9:00 до 18:00, субота в черговому режимі з 10:00 до 15:00')</p>
                                 <div class="contacts_block_social">
                                     <p>@lang('Ми в соціальних мережах'):</p>
                                     <div class="d-flex mt-4">
@@ -589,8 +589,10 @@
                         </div>
                         <div class="col-lg-7 offset-lg-1">
                             <div class="contacts_block">
-                                <h4>ТЕЛЕФОН:</h4>
-                                <a href="tel:+480669476096">+48 066 947 6096<span>@lang('НАТАЛЯ')</span></a>
+                                <h4>@lang('ТЕЛЕФОНИ'):</h4>
+                                <a href="tel:+380501869757">+38(050)1869757</a><br/>
+                                <a href="tel:+380672508857">+38(067)2508857</a><br/>
+                                <a href="tel:+380635002264">+38(063)5002264</a><br/>
                                 <h4>EMAIL:</h4>
                                 <a href="mailto:natalypo88@gmail.com">natalypo88@gmail.com</a>
                             </div>
