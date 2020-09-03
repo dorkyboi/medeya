@@ -10,7 +10,7 @@
                             <a class="navbar-brand" href="{{ indexLink() }}">
                                 <img src="/img/logo.png" alt="logo" />
                             </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <button class="navbar-toggler collapsed" id="headerMenuToggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span></span>
                                 <span></span>
                                 <span></span>

@@ -1,13 +1,6 @@
 require('./bootstrap');
 
-$(window).scroll(function(){
-    if ($(window).scrollTop() > 0) {
-        $('header').addClass('active');
-    }
-    if ( $(window).scrollTop() <= 44 ){
-        $('header').removeClass('active');
-    }
-});
+require('./header');
 
 $(document).ready(function () {
 

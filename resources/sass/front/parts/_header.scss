@@ -1,6 +1,7 @@
 .wrapper{
     header{
-        transition: $speed-high;
+        transition: 1s, top 0.25s;
+
         .navbar{
             align-items: end;
             padding: 0 30px;
@@ -70,6 +71,10 @@
                     background-color: $light-violet;
                 }
             }
+        }
+
+        &.hidden {
+            top: -150px;
         }
     }
     .header-fixed{

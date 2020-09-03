@@ -1,8 +1,6 @@
 {
     "/js/admin.js": "/js/admin.js",
-    "/js/admin.js.map": "/js/admin.js.map",
     "/js/front.js": "/js/front.js",
     "/css/front.css": "/css/front.css",
-    "/css/admin.css": "/css/admin.css",
-    "/js/front.js.map": "/js/front.js.map"
+    "/css/admin.css": "/css/admin.css"
 }
