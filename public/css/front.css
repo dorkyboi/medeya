@@ -17461,6 +17461,19 @@ body {
   line-height: 1;
 }
 
+/*@media all and (max-width: 767px) {
+    main {
+        background-color: #ddd;
+
+        & > section {
+            margin: 15px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}*/
+
 h2 {
   font-size: 60px;
   position: relative;

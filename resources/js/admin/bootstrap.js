@@ -7,6 +7,9 @@ window.$html = $('html');
 window.$body = $('body');
 window.csrf_token = $('meta[name=csrf-token]').attr('content');
 
+require('datatables.net');
+require('datatables.net-bs4');
+
 /* TinyMCE WYSIWYG */
 require('tinymce');
 

@@ -12,7 +12,7 @@ class AdminLoginController extends LoginController
      * @return \Illuminate\View\View
      */
     public function showLoginForm() {
-        return view('admin.auth.login');
+        return view('auth.admin.login');
     }
 
     protected function loggedOut(Request $request) {

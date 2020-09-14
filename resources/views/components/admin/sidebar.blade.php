@@ -5,8 +5,7 @@
 --}}
 
 
-<div class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" data-color="purple"
-     data-background-color="black">
+<div class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" data-color="primary" data-background-color="black">
 
     <div class="logo">
         <!-- Sidebar - Brand -->
@@ -19,5 +18,5 @@
         {{ (new \App\MenuItems\MenuItemsOrchestrator())->render() }}
     </div>
 
-    <div class="sidebar-background" style="background-color: darkgreen"></div>
+    <div class="sidebar-background" style="background-color: darkslateblue"></div>
 </div>

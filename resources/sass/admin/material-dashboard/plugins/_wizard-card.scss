@@ -49,7 +49,7 @@
         font-weight: 500;
     }
 
-    &[data-color="purple"]{
+    &[data-color="primary"]{
         @include set-wizard-color($brand-primary);
     }
 

@@ -8,6 +8,7 @@ class MenuItemsOrchestrator
 {
     private $menu_items = [
         Homepage::class,
+        Users::class,
     ];
 
     public function __construct() {

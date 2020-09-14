@@ -6,7 +6,7 @@
             <div class="col-xl-5 col-lg-5 col-md-8">
                 <div class="card">
                     <div class="card-body">
-                        <div class="text-center">
+                        <div class="text-center mb-4">
                             {{--<h3 class="text-gray-900 mb-0">{{ __('login.title') }}</h3>--}}
                             <img src="/img/logo.png" class="img-fluid login-logo px-3 pt-2" alt="logo" />
                         </div>
