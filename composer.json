@@ -19,7 +19,8 @@
         "spatie/laravel-permission": "^3.16",
         "spatie/laravel-translatable": "^4.4",
         "unisharp/laravel-filemanager": "^2.1",
-        "yajra/laravel-datatables": "^1.5"
+        "yajra/laravel-datatables": "^1.5",
+        "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

@@ -1,16 +1,18 @@
 @extends('layouts.admin.main')
 
-@section('content')
+@section('main')
     @component('components.admin.page-header')
-        {{ __('homepage.page_title') }}
+        {{ __('Homepage settings') }}
     @endcomponent
 
-    <div class="card shadow">
+    <x-form-locale-switcher :form="$form"/>
+
+    {{--<div class="card shadow">
         <div class="card-body">
             <div class="container-fluid">
-                <form action="{{ route('homepage.update') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.homepage.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="card shadow">
+                    --}}{{--<div class="card shadow">
                         <div class="card-header card-header card-header-text card-header-success">
                             <div class="card-text">
                                 <h4 class="card-title">Favicon</h4>
@@ -114,96 +116,9 @@
                         <div class="col-12">
                             @include('components.admin.submit-button')
                         </div>
-                    </div>
+                    </div>--}}{{--
                 </form>
             </div>
         </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade bd-example-modal-lg" id="homepage_offers_list" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{__('homepage.add_offer')}}</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="">
-                        <div class="form-row align-items-center">
-                            <div class="col-9">
-                                <select data-select2-model="App\Offer" class="select2" multiple id="selected_offers" name="selected_offers">
-                                    @foreach($added_offers as $offer)
-                                        <option value="{{$offer->id}}" selected>{{$offer->title}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="col-3">
-                                <button type="button" class="btn btn-success" id="update_offer_list">{{__('generic.save')}}</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div>--}}
 @endsection
-
-@push('scripts')
-    <script>
-        $( "#homepage_sortable_offers" ).sortable({
-            connectWith: '#homepage_sortable_offers',
-            update: function(event, ui) {
-                var order = $(this).sortable('toArray',{attribute: 'data-offer_id'});
-                var positions = order.join(',');
-
-                console.log({
-                    positions: positions
-                });
-            }
-        });
-        $("#update_offer_list").on("click",function(){
-            //#selected_offers
-            //#homepage_sortable_offers
-            var rendered_offers = [];
-            $.each($('#selected_offers option'), function(){
-                var text = $(this).text();
-                var id = $(this).val();
-                rendered_offers.push({"text":text, "id":id});
-            });
-            console.log(rendered_offers);
-            $('#homepage_offers_list').modal('hide');
-            $("#homepage_sortable_offers").html('');
-            if(rendered_offers.length > 0){
-
-                var render_list = "";
-                $.each(rendered_offers, function(index, value){
-                    render_list += "" +
-                        "<li class=\"list-group-item border-bottom\" data-offer_id=\""+value.id+"\">" +
-                            "<div class=\"d-flex justify-content-between\">" +
-                                "<h4>" + value.text + "</h4>" +
-                            "<input type=\"hidden\" name=\"promoted_offers[]\" value=\""+value.id+"\">" +
-                                "<div class=\"homepage-offers-offer-actions\">" +
-                                    "<a href=\"#\" class=\"btn btn-primary homepage_move_offer_button\">" +
-                                        "<em class=\"fas fa-arrows-alt\"></em>\n" +
-                                    "</a>" +
-                                    "<a href=\"#\" class=\"btn btn-danger homepage_delete_offer_button\">" +
-                                        "<em class=\"fas fa-trash\"></em>\n" +
-                                    "</a>" +
-                                "</div>" +
-                            "</div>" +
-                        "</li>";
-                });
-                $("#homepage_sortable_offers").html(render_list);
-            }
-            $(".homepage_delete_offer_button").on('click', function(){
-                $(this).closest("li").remove();
-            });
-        });
-        $(".homepage_delete_offer_button").on('click', function(){
-            $(this).closest("li").remove();
-        });
-    </script>
-@endpush

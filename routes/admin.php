@@ -31,7 +31,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::middleware(['admin.auth', 'can:access admin panel'])->group(function () {
         Route::redirect('/', '/admin/homepage');
 
-        Route::view('homepage', 'pages.admin.homepage')->name('homepage.index');
+        Route::resource('homepage', 'Admin\HomepageController')->only(['index', 'store']);
         Route::resource('users', 'Admin\UserController')->except(['destroy']);
 
         Route::post('logout', 'Auth\AdminLoginController@logout')->name('logout');

@@ -3,31 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Course;
-use App\DataTables\UserDataTable;
 use App\Http\Controllers\Controller;
-use App\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class CourseController extends Controller
 {
-    public function __construct() {
-        $this->authorizeResource(User::class);
-    }
-
     /**
      * Display a listing of the resource.
      *
-     * @param  \App\DataTables\UserDataTable  $dataTable
-     *
      * @return \Illuminate\Http\Response
      */
-    public function index(UserDataTable $dataTable) {
-        return $this->renderDatatable($dataTable, __('Користувачі'), [
-            'create' => [
-                'route' => route('admin.users.create'),
-                'permission' => 'create users',
-            ],
-        ]);
+    public function index()
+    {
+        //
     }
 
     /**
@@ -35,7 +23,8 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create() {
+    public function create()
+    {
         //
     }
 
@@ -43,10 +32,10 @@ class UserController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     *
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         //
     }
 
@@ -54,10 +43,10 @@ class UserController extends Controller
      * Display the specified resource.
      *
      * @param  \App\Course  $course
-     *
      * @return \Illuminate\Http\Response
      */
-    public function show(Course $course) {
+    public function show(Course $course)
+    {
         //
     }
 
@@ -65,10 +54,10 @@ class UserController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  \App\Course  $course
-     *
      * @return \Illuminate\Http\Response
      */
-    public function edit(Course $course) {
+    public function edit(Course $course)
+    {
         //
     }
 
@@ -77,10 +66,21 @@ class UserController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Course  $course
-     *
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Course $course) {
+    public function update(Request $request, Course $course)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Course  $course
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Course $course)
+    {
         //
     }
 }
