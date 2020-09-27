@@ -21,7 +21,7 @@ class UserDataTable extends AbstractDataTable
                 return view('components.admin.actions', [
                     'route' => 'users',
                     'entity' => $user,
-                    'delete' => false,
+                    'none' => true,
                 ]);
             });
     }

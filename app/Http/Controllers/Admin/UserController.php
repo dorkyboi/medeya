@@ -22,7 +22,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(UserDataTable $dataTable) {
-        return $this->renderDatatable($dataTable, __('Користувачі'), [
+        return $this->renderDatatable($dataTable, __('Users'), [
             'create' => [
                 'route' => route('admin.users.create'),
                 'permission' => 'create users',

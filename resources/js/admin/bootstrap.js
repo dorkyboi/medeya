@@ -11,7 +11,12 @@ require('datatables.net');
 require('datatables.net-bs4');
 
 /* TinyMCE WYSIWYG */
-require('tinymce');
+import tinymce from 'tinymce/tinymce';
+window.tinymce = tinymce;
+import 'tinymce/icons/default';
+import 'tinymce/themes/silver';
+import 'tinymce/plugins/lists';
+import 'tinymce/plugins/code';
 
 /* Plugin for the Perfect Scrollbar */
 require('./material-dashboard/plugins/perfect-scrollbar.jquery.min');

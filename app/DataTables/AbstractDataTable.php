@@ -5,6 +5,7 @@ namespace App\DataTables;
 use Yajra\DataTables\Html\Builder;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Services\DataTable;
+use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 
 abstract class AbstractDataTable extends DataTable
 {
@@ -31,6 +32,9 @@ abstract class AbstractDataTable extends DataTable
         $builder = $this->builder()
             ->columns($this->getColumns())
             ->minifiedAjax()
+            ->parameters([
+                'searchDelay' => 500,
+            ])
             ->addTableClass('table-hover table-sm')
             ->language(self::LOCALES[app()->getLocale()]);
 
@@ -62,5 +66,66 @@ abstract class AbstractDataTable extends DataTable
      */
     protected function getActionsColumn() {
         return Column::computed('actions', __('Actions'))->addClass('text-right no-stretch');
+    }
+
+    /**
+     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  array                                  $params
+     *  $params = [
+     *      'field'         string  Name of the database column
+     *      'relation'      string  Name of relation
+     *      'translatable'  bool    Whether column contains translatable JSON data
+     *      'nested'        array   Array of relation columns and/or relations
+     *  ];
+     */
+    protected function filter(EloquentBuilder $query, array $params) {
+        $request = request();
+        $search = $request->has('search') && isset($request->input('search')['value']) && !empty($request->input('search')['value'])
+            ? '%' . $request->input('search')['value'] . '%'
+            : null;
+
+        if ($search)
+            $this->recursiveFilter($query, $search, $params);
+    }
+
+    private function recursiveFilter(EloquentBuilder $query, string $search, array $params, bool $isFirstWhere = true) {
+        foreach ($params as $options) {
+            if (isset($options['relation'])) {
+                if ($isFirstWhere) {
+                    $query->whereHas($options['relation'], function ($q) use ($search, $options, $isFirstWhere) {
+                        $this->recursiveFilter($q, $search, $options['nested'], $isFirstWhere);
+                    });
+                }
+                else {
+                    $query->orWhereHas($options['relation'], function ($q) use ($search, $options, $isFirstWhere) {
+                        $this->recursiveFilter($q, $search, $options['nested'], $isFirstWhere);
+                    });
+                }
+            }
+            else {
+                if ($isFirstWhere) {
+                    if ($options['translatable'] ?? false) {
+                        $query->where(function ($q) use ($options, $search) {
+                            $q->where($options['field'] . '->' . app()->getLocale(), 'like', $search)
+                                ->orWhere($options['field'] . '->' . config('app.fallback_locale'), 'like', $search);
+                        });
+                    }
+                    else
+                        $query->where($options['field'], 'like', $search);
+                }
+                else {
+                    if ($options['translatable'] ?? false) {
+                        $query->orWhere(function ($q) use ($options, $search) {
+                            $q->where($options['field'] . '->' . app()->getLocale(), 'like', $search)
+                                ->orWhere($options['field'] . '->' . config('app.fallback_locale'), 'like', $search);
+                        });
+                    }
+                    else
+                        $query->orWhere($options['field'], 'like', $search);
+                }
+            }
+
+            $isFirstWhere = false;
+        }
     }
 }

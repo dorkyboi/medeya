@@ -16,6 +16,11 @@ class PermissionController extends Controller
         'read users',
         'create users',
         'update users',
+
+        'list courses',
+        'read courses',
+        'create courses',
+        'update courses',
     ];
 
     public static function seed() {

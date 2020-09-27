@@ -33,6 +33,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
 
         Route::resource('homepage', 'Admin\HomepageController')->only(['index', 'store']);
         Route::resource('users', 'Admin\UserController')->except(['destroy']);
+        Route::resource('courses', 'Admin\CourseController');
 
         Route::post('logout', 'Auth\AdminLoginController@logout')->name('logout');
     });
