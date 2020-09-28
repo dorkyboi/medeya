@@ -37,3 +37,12 @@ if (!function_exists('indexLink')) {
         return '/' . app()->getLocale() . '/' . getCity();
     }
 }
+
+function pushTitlePart($part) {
+    if ($part)
+        app(\App\Helpers\TitleGenerator::class)->push($part);
+}
+
+function compileTitleParts() {
+    return app(\App\Helpers\TitleGenerator::class)->compile();
+}

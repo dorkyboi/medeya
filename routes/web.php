@@ -18,9 +18,7 @@ Route::redirect('/', '/' . config('app.fallback_locale') . '/' . config('app.fal
 Route::group(['middleware' => 'city.locale', 'prefix' => '{locale}/{city}'], function () {
     Route::view('/', 'pages.front.home');
 
-    
+
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

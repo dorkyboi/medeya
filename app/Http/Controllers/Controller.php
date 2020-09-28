@@ -8,12 +8,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Kris\LaravelFormBuilder\FormBuilderTrait;
 use Yajra\DataTables\Services\DataTable;
 use Kris\LaravelFormBuilder\FormBuilder;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests, FormBuilderTrait;
 
     /**
      * @param  \Yajra\DataTables\Services\DataTable  $datatable
@@ -27,27 +28,15 @@ class Controller extends BaseController
     }
 
     /**
-     * Render create/edit form
+     * Validate form request and get array of validated data.
      *
-     * @param  string  $form
-     * @param  string  $route
-     * @param  bool  $edit
-     * @param  array  $headerArgs
-     * @param  \Illuminate\Database\Eloquent\Model|null  $model
+     * @param  string $formClass
      *
-     * @return mixed
+     * @return array
      */
-    protected function renderForm(string $form, string $route, bool $edit, array $headerArgs = [], Model $model = null) {
-        $formBuilder = app(FormBuilder::class);
-
-        return view('pages.admin.edit')->with([
-            'edit' => $edit,
-            'headerArgs' => $headerArgs,
-            'form' => $formBuilder->create($form, [
-                'method' => $edit ? 'POST' : 'PUT',
-                'url' => $route,
-                'model' => $model,
-            ])->setFormOption('novalidate', true),
-        ]);
+    protected function getValidatedFormData(string $formClass) {
+        $form = $this->form($formClass);
+        $form->redirectIfNotValid();
+        return $form->getFieldValues();
     }
 }

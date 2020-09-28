@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Helpers\TitleGenerator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -11,9 +12,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
-        //
+    public function register() {
+        $this->app->singleton(TitleGenerator::class, function () {
+            return new TitleGenerator();
+        });
     }
 
     /**
@@ -21,8 +23,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot() {
         //
     }
 }

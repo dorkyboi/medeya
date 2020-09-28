@@ -25,4 +25,5 @@ class Course extends Model
     use HasTranslations, SoftDeletes;
 
     public $translatable = ['title', 'excerpt', 'description'];
+    public $fillable = ['title', 'excerpt', 'description'];
 }

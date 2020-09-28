@@ -9,6 +9,7 @@ require('./modules/sidebar-toggler');
 require('./modules/navbar-toggler');
 require('./modules/perfect-scrollbar');
 require('./modules/swals');
+require('./modules/jquery-validator');
 
 $('#logout-button').on('click', e => {
     e.preventDefault();

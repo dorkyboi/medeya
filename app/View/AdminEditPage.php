@@ -30,13 +30,6 @@ class AdminEditPage
     public $subtitle = '';
 
     /**
-     * Whether editing model or making new one
-     *
-     * @var boolean
-     */
-    public $isEdit = false;
-
-    /**
      * Model instance when editing to get values from
      *
      * @var \Illuminate\Database\Eloquent\Model
@@ -101,18 +94,6 @@ class AdminEditPage
     }
 
     /**
-     * Set $isEdit
-     *
-     * @param  bool  $isEdit
-     *
-     * @return \App\View\AdminEditPage
-     */
-    public function setIsEdit(bool $isEdit): AdminEditPage {
-        $this->isEdit = $isEdit;
-        return $this;
-    }
-
-    /**
      * Set model instance
      *
      * @param  \Illuminate\Database\Eloquent\Model  $model
@@ -170,10 +151,11 @@ class AdminEditPage
 
         return view('pages.admin.edit')->with(array_merge(get_object_vars($this), [
             'form' => $formBuilder->create($this->form, [
-                'method' => $this->isEdit ? 'POST' : 'PUT',
+                'method' => $this->model ? 'PUT' : 'POST',
                 'url' => $this->formAction,
                 'model' => $this->model,
-            ])->setFormOption('novalidate', true),
+                'attr' => ['data-validate' => true],
+            ]),
         ]));
     }
 }

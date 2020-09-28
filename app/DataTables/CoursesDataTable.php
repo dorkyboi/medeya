@@ -16,9 +16,9 @@ class CoursesDataTable extends AbstractDataTable
                 return $course->excerpt;
             })->addColumn('actions', function (Course $course) {
                 return view('components.admin.actions', [
-                    'route' => 'users',
+                    'route' => 'courses',
                     'entity' => $course,
-                    'none' => true,
+                    'browse' => false,
                 ]);
             })->filter(function ($query) {
                 $this->filter($query, [

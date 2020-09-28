@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Course;
 use App\DataTables\CoursesDataTable;
 use App\Forms\CourseForm;
+use App\Helpers\TitleGenerator;
 use App\Http\Controllers\Controller;
 use App\View\AdminEditPage;
 use Illuminate\Http\Request;
@@ -13,15 +14,9 @@ class CourseController extends Controller
 {
     public function __construct() {
         $this->authorizeResource(Course::class);
+        pushTitlePart(__('Courses'));
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @param  \App\DataTables\CoursesDataTable  $dataTable
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(CoursesDataTable $dataTable) {
         return $this->renderDatatable($dataTable, __('Courses'), [
             'create' => [
@@ -31,16 +26,40 @@ class CourseController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\View\View
-     */
     public function create() {
+        return $this->renderForm();
+    }
+
+    public function store() {
+        Course::create($this->getValidatedFormData(CourseForm::class))->save();
+        return redirect(route('admin.courses.index'));
+    }
+
+    public function show(Course $course) {
+        //
+    }
+
+    public function edit(Course $course) {
+        return $this->renderForm($course);
+    }
+
+    public function update(Course $course) {
+        $course->fill($this->getValidatedFormData(CourseForm::class))->save();
+        return redirect(route('admin.courses.index'));
+    }
+
+    public function destroy(Course $course) {
+        $course->delete();
+        return redirect(route('admin.courses.index'));
+    }
+
+    private function renderForm(Course $course = null) {
         return (new AdminEditPage())
             ->setForm(CourseForm::class)
-            ->setFormAction(route('admin.courses.store'))
+            ->setModel($course)
+            ->setFormAction($course ? route('admin.courses.update', $course) : route('admin.courses.store'))
             ->setTitle(__('Create course'))
+            ->setSubtitle($course ? $course->title : null)
             ->setHeaderArgs([
                 'back_to_list' => [
                     'route' => route('admin.courses.index'),
@@ -49,61 +68,5 @@ class CourseController extends Controller
             ])
             ->setTranslatable(true)
             ->render();
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request) {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Course  $course
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Course $course) {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Course  $course
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Course $course) {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Course  $course
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Course $course) {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Course  $course
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Course $course) {
-        //
     }
 }
