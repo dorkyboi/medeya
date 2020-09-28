@@ -57,3 +57,6 @@ require('select2/dist/js/i18n/' + locale + '.js');
 
 /* Control Center for Material Dashboard: parallax effects, scripts for the example pages etc */
 // require('./material-dashboard/material-dashboard.min');
+$body.bootstrapMaterialDesign({
+    autofill: false
+});

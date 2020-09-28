@@ -5,25 +5,21 @@
 <div id="form-locale-switcher" class="card card-nav-tabs mt-5">
     <div class="card-header card-header-primary">
         {{-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" --}}
-        <div class="nav-tabs-navigation">
-            <div class="nav-tabs-wrapper">
-                <ul class="nav nav-tabs" data-tabs="tabs">
-                    @foreach(config('app.locales') as $locale)
-                        <li class="nav-item">
-                            <a
-                                class="nav-link{{ $locale === config('app.fallback_locale') ? ' active show' : '' }}"
-                                href="#{{ $locale }}"
-                                data-locale-switcher="{{ $locale }}"
-                                data-toggle="tab"
-                            >
-                                <span class="flag-icon {{ \App\Helpers\Locales::ICONS[$locale] }}"></span>
-                                &nbsp;{{ \App\Helpers\Locales::LABELS[app()->getLocale()][$locale] }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
+        <ul class="nav nav-tabs">
+            @foreach(config('app.locales') as $locale)
+                <li class="nav-item">
+                    <a
+                        class="nav-link{{ $locale === config('app.fallback_locale') ? ' active show' : '' }}"
+                        href="#{{ $locale }}"
+                        data-locale-switcher="{{ $locale }}"
+                        data-toggle="tab"
+                    >
+                        <span class="flag-icon {{ \App\Helpers\Locales::ICONS[$locale] }}"></span>
+                        &nbsp;{{ \App\Helpers\Locales::LABELS[app()->getLocale()][$locale] }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
     </div>
     <div class="card-body">
         @if((string) $slot)
