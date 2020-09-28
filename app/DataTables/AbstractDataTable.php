@@ -34,6 +34,8 @@ abstract class AbstractDataTable extends DataTable
             ->minifiedAjax()
             ->parameters([
                 'searchDelay' => 500,
+                'responsive' => true,
+                'autoWidth' => false,
             ])
             ->addTableClass('table-hover table-sm')
             ->language(self::LOCALES[app()->getLocale()]);
