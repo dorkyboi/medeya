@@ -4,8 +4,6 @@ namespace App\Forms;
 
 class CourseForm extends AbstractForm
 {
-    public $isOneColumnLayout = true;
-
     public function buildForm() {
         $this->addTranslated('title', 'text', [
             'label' => __('Title'),

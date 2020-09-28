@@ -72,11 +72,11 @@ class AdminEditPage
     /**
      * Set page header title
      *
-     * @param  string  $title
+     * @param  string|null  $title
      *
      * @return \App\View\AdminEditPage
      */
-    public function setTitle(string $title): AdminEditPage {
+    public function setTitle(?string $title): AdminEditPage {
         $this->title = $title;
         return $this;
     }
@@ -84,11 +84,11 @@ class AdminEditPage
     /**
      * Set page header subtitle
      *
-     * @param  string  $subtitle
+     * @param  string|null  $subtitle
      *
      * @return \App\View\AdminEditPage
      */
-    public function setSubtitle(string $subtitle): AdminEditPage {
+    public function setSubtitle(?string $subtitle): AdminEditPage {
         $this->subtitle = $subtitle;
         return $this;
     }
@@ -96,11 +96,11 @@ class AdminEditPage
     /**
      * Set model instance
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \Illuminate\Database\Eloquent\Model|null  $model
      *
      * @return \App\View\AdminEditPage
      */
-    public function setModel(Model $model): AdminEditPage {
+    public function setModel(?Model $model): AdminEditPage {
         $this->model = $model;
         return $this;
     }

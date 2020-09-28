@@ -29,9 +29,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::post('login', 'Auth\AdminLoginController@login');
 
     Route::middleware(['admin.auth', 'can:access admin panel'])->group(function () {
-        Route::redirect('/', '/admin/homepage');
+        Route::redirect('/', '/admin/courses');
 
-        Route::resource('homepage', 'Admin\HomepageController')->only(['index', 'store']);
+//        Route::resource('homepage', 'Admin\HomepageController')->only(['index', 'store']);
         Route::resource('users', 'Admin\UserController')->except(['destroy']);
         Route::resource('courses', 'Admin\CourseController');
 

@@ -7,7 +7,7 @@ use Illuminate\Support\HtmlString;
 class MenuItemsOrchestrator
 {
     private $menu_items = [
-        Homepage::class,
+//        Homepage::class,
         Courses::class,
         Users::class,
     ];

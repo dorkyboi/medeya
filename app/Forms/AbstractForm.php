@@ -6,7 +6,7 @@ use Kris\LaravelFormBuilder\Form;
 
 abstract class AbstractForm extends Form
 {
-    public $isOneColumnLayout = false;
+    public $isOneColumnLayout = true;
 
     protected function addSubmitButton() {
         $this->add('submit', 'submit', [
