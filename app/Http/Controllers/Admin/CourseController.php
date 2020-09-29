@@ -58,7 +58,7 @@ class CourseController extends Controller
             ->setForm(CourseForm::class)
             ->setModel($course)
             ->setFormAction($course ? route('admin.courses.update', $course) : route('admin.courses.store'))
-            ->setTitle(__('Create course'))
+            ->setTitle($course ? __('Edit course') : __('Create course'))
             ->setSubtitle($course ? $course->title : null)
             ->setHeaderArgs([
                 'back_to_list' => [
