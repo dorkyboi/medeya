@@ -3,8 +3,6 @@ window.Popper = require('popper.js').default;
 require('./material-dashboard/bootstrap-material-design.min');
 
 window.locale = document.documentElement.lang;
-window.$html = $('html');
-window.$body = $('body');
 window.csrf_token = $('meta[name=csrf-token]').attr('content');
 
 require('datatables.net');
@@ -54,6 +52,9 @@ require('select2/dist/js/i18n/' + locale + '.js');
 
 /* Notifications Plugin */
 // require("/admin/js/plugins/bootstrap-notify.js");
+
+window.$html = $('html');
+window.$body = $('body');
 
 /* Control Center for Material Dashboard: parallax effects, scripts for the example pages etc */
 // require('./material-dashboard/material-dashboard.min');
