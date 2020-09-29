@@ -1,5 +1,6 @@
 require('./bootstrap');
 
+require('./modules/floating-labels');
 require('./modules/select2');
 require('./modules/form-locale-switcher');
 require('./modules/laravel-file-manager');
